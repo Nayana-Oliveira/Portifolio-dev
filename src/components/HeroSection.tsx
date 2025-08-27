@@ -48,7 +48,7 @@ const HeroSection = () => {
               Olá, eu sou
             </h2>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-              Ana Silva
+              Nayana Heslley
             </h1>
           </div>
 
