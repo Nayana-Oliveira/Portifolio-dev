@@ -46,7 +46,7 @@ const Header = () => {
             className="text-xl font-bold text-primary cursor-pointer hover:text-primary-glow transition-colors"
             onClick={() => scrollToSection("inicio")}
           >
-            &lt;DevSistemas/&gt;
+            &lt;Portifólio Nayana Heslley/&gt;
           </div>
 
           <nav className="hidden md:flex space-x-8">

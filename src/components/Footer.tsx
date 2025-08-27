@@ -27,7 +27,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <Code2 className="w-8 h-8 text-primary" />
               <span className="text-xl font-bold text-foreground">
-                &lt;DevSistemas/&gt;
+                &lt;Nayana Heslley/&gt;
               </span>
             </div>
             <p className="text-muted-foreground text-sm max-w-xs">

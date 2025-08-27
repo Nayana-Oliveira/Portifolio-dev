@@ -43,13 +43,13 @@ const SkillsSection = () => {
     {
       title: "Backend", 
       icon: Server,
-      skills: ["Node.js", "Java", "Python", "API REST"],
+      skills: ["Node.js", "Java", "Python"],
       color: "from-green-500 to-teal-600"
     },
     {
       title: "Database",
       icon: Database, 
-      skills: ["MySQL", "SQL Server"],
+      skills: ["MySQL", "SQL Server", "MongoDB"],
       color: "from-orange-500 to-red-600"
     },
     {
@@ -58,16 +58,16 @@ const SkillsSection = () => {
       skills: ["AWS", "Git"],
       color: "from-purple-500 to-pink-600"
     },
-//    {
-//      title: "Mobile",
-//      icon: Smartphone,
-//      skills: ["React Native", "Flutter", "Expo", "Android", "iOS", "PWA"],
-//      color: "from-cyan-500 to-blue-600"
-//    },
+    {
+      title: "Mobile",
+      icon: Smartphone,
+      skills: ["React Native", "Android"],
+      color: "from-cyan-500 to-blue-600"
+    },
     {
       title: "Tools",
       icon: Zap,
-      skills: ["VS Code", "IntelliJ", "Figma"],
+      skills: ["VS Code", "Figma"],
       color: "from-yellow-500 to-orange-600"
     }
   ];
@@ -125,13 +125,13 @@ const SkillsSection = () => {
                   <div className="mt-6 pt-4 border-t border-border">
                     <div className="flex justify-between text-sm text-muted-foreground mb-2">
                       <span>Nível de Proficiência</span>
-                      <span>Avançado</span>
+                      <span>Intermediário</span>
                     </div>
                     <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
                       <div 
                         className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 group-hover:animate-glow`}
                         style={{ 
-                          width: isVisible ? '85%' : '0%',
+                          width: isVisible ? '50%' : '0%',
                           transitionDelay: `${categoryIndex * 200}ms`
                         }}
                       ></div>
@@ -151,9 +151,7 @@ const SkillsSection = () => {
                 "Design Patterns",
                 "Microserviços",
                 "Testes Unitários",
-                "Arquitetura de Software",
                 "UX/UI Basics",
-                "Performance Optimization"
               ].map((skill, index) => (
                 <span 
                   key={skill}

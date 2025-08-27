@@ -65,7 +65,6 @@ const AboutSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Photo */}
             <div className={`${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
               <div className="relative">
                 <div className="relative overflow-hidden rounded-2xl shadow-card">
