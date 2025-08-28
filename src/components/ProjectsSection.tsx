@@ -29,15 +29,15 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e gestão de estoque. Desenvolvida com React, Node.js e PostgreSQL.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
+      title: "Meta+",
+      description: "Plataforma de dashboard para gerenciamento de metas pessoais.",
+      technologies: ["React", "TypeScript", "Vite", "shadcn-ui", "Tailwind CSS"],
       icon: Zap,
       gradient: "from-blue-500 to-purple-600",
-      features: ["Dashboard Analytics", "Payment Integration", "Real-time Updates", "Mobile Responsive"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      image: projectEcommerce
+      features: ["Sistema de progresso visual", "Definições de prioridades e prazos para cada meta", "Perfil de usuário", "Responsivo com mobile"],
+      github: "https://github.com/Nayana-Oliveira/Meta",
+      demo: "https://meta-devnay.vercel.app/login",
+      image: './assets/meta+'
     },
     {
       title: "Sistema de Gestão Hospitalar",
