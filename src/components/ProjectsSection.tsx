@@ -27,6 +27,10 @@ const ProjectsSection = () => {
     return () => observer.disconnect();
   }, []);
 
+import MetaImage from './assets/meta-plus.png';
+import HospitalImage from './assets/hospital.png';
+import MobileImage from './assets/produtividade.png';
+
   const projects = [
     {
       title: "Meta+",
@@ -37,7 +41,7 @@ const ProjectsSection = () => {
       features: ["Sistema de progresso visual", "Definições de prioridades e prazos para cada meta", "Perfil de usuário", "Responsivo com mobile"],
       github: "https://github.com/Nayana-Oliveira/Meta",
       demo: "https://meta-devnay.vercel.app/login",
-      image: './assets/meta+'
+      image: MetaImage
     },
     {
       title: "Sistema de Gestão Hospitalar",
