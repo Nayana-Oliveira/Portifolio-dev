@@ -27,7 +27,7 @@ const ProjectsSection = () => {
     return () => observer.disconnect();
   }, []);
 
-import MetaImage from './assets/meta-plus.png';
+import MetaImage from './assets/meta+.png';
 import HospitalImage from './assets/hospital.png';
 import MobileImage from './assets/produtividade.png';
 
