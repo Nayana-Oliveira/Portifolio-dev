@@ -5,7 +5,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Desenvolvedora de Sistemas";
+  const fullText = "Desenvolvedora Fullstack";
   
   useEffect(() => {
     let currentIndex = 0;

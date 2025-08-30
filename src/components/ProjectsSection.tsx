@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Github, Zap, Shield, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import projectEcommerce from "@/assets/project-ecommerce.jpg";
+import projectEcommerce from "@/assets/meta+.png";
 import projectHospital from "@/assets/project-hospital.jpg";
 import projectMobile from "@/assets/project-mobile.jpg";
 
@@ -13,53 +13,26 @@ const ProjectsSection = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        if (entry.isIntersecting) setIsVisible(true);
       },
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
   const projects = [
     {
       title: "Meta+",
-      description: "Plataforma de dashboard para gerenciamento de metas pessoais.",
-      technologies: ["React", "TypeScript", "Vite", "shadcn-ui", "Tailwind CSS"],
+      description: "Plataforma de dashboard para gerenciar metas pessoais.",
+      technologies: ["React", "Tailwind CSS", "Vite", "shadcn-ui", "TypeScript"],
       icon: Zap,
       gradient: "from-blue-500 to-purple-600",
-      features: ["Sistema de progresso visual", "Definições de prioridades e prazos para cada meta", "Perfil de usuário", "Responsivo com mobile"],
+      features: ["Dashboards", "Perfil de usuário", "Criação, edição e exclusão de metas", "Responsivo"],
       github: "https://github.com/Nayana-Oliveira/Meta",
       demo: "https://meta-devnay.vercel.app/login",
-      image: "/assets/meta+.png"
-    },
-    {
-      title: "Sistema de Gestão Hospitalar",
-      description: "Sistema robusto para gestão de pacientes, médicos e procedimentos hospitalares. Interface intuitiva com foco na usabilidade e segurança de dados.",
-      technologies: ["Java", "Spring Boot", "MySQL", "Angular", "JWT"],
-      icon: Shield,
-      gradient: "from-green-500 to-teal-600",
-      features: ["Security First", "Role-based Access", "Data Encryption", "Audit Trail"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      image: projectHospital
-    },
-    {
-      title: "App de Produtividade",
-      description: "Aplicativo mobile para gestão de tarefas e produtividade pessoal. Sincronização em tempo real e interface clean focada na experiência do usuário.",
-      technologies: ["React Native", "Firebase", "Redux", "Expo", "TypeScript"],
-      icon: Smartphone,
-      gradient: "from-orange-500 to-red-600",
-      features: ["Offline Mode", "Real-time Sync", "Push Notifications", "Dark/Light Theme"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      image: projectMobile
+      image: projectEcommerce
     }
   ];
 
@@ -125,22 +98,18 @@ const ProjectsSection = () => {
                           <Button 
                             variant="default"
                             className="bg-primary hover:bg-primary-hover text-primary-foreground shadow-glow hover:shadow-hover transition-all duration-300"
-                            asChild
+                            onClick={() => window.open(project.github, "_blank")}
                           >
-                            <a href={project.github} target="_blank" rel="noopener noreferrer">
-                              <Github className="w-4 h-4 mr-2" />
-                              Código
-                            </a>
+                            <Github className="w-4 h-4 mr-2" />
+                            Código
                           </Button>
                           <Button 
                             variant="outline"
                             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                            asChild
+                            onClick={() => window.open(project.demo, "_blank")}
                           >
-                            <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="w-4 h-4 mr-2" />
-                              Demo
-                            </a>
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Demo
                           </Button>
                         </div>
                       </div>
