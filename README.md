@@ -1,22 +1,22 @@
-# 👩‍💻 Bem-vindo ao meu Portfólio
+# Bem-vindo ao meu Portfólio
 
 Este é o repositório do meu **portfólio online**, desenvolvido para apresentar minhas habilidades, projetos e experiências como **Desenvolvedora de Sistemas**.  
 O site foi criado para ser **moderno, responsivo e interativo**, com animações fluidas e foco em uma experiência agradável para o usuário. 🚀  
 
-🔗 **Acesse aqui:** [Meu Portfólio](https://lovable.dev/projects/747350fc-7642-44dc-b134-f37b6817ff3c)
+ **Acesse aqui:** [Meu Portfólio](https://lovable.dev/projects/747350fc-7642-44dc-b134-f37b6817ff3c)
 
 ---
 
-## ✨ Recursos principais
-- 🎨 **Design moderno** com **Tailwind CSS** e componentes estilizados.  
-- 📱 **Responsividade total**: funciona perfeitamente em desktop, tablet e mobile.  
-- ⚡ **Performance otimizada** com Vite e React.  
-- 🖱️ **Animações suaves** para navegação fluida (scroll, hover e transições).  
-- 📂 **Seções organizadas**: Sobre Mim, Habilidades, Projetos, Contato e mais.  
+## Recursos principais
+-  **Design moderno** com **Tailwind CSS** e componentes estilizados.  
+-  **Responsividade total**: funciona perfeitamente em desktop, tablet e mobile.  
+-  **Performance otimizada** com Vite e React.  
+-  **Animações suaves** para navegação fluida (scroll, hover e transições).  
+-  **Seções organizadas**: Sobre Mim, Habilidades, Projetos, Contato e mais.  
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
