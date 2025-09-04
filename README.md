@@ -3,7 +3,7 @@
 Este é o repositório do meu **portfólio online**, desenvolvido para apresentar minhas habilidades, projetos e experiências como **Desenvolvedora de Sistemas**.  
 O site foi criado para ser **moderno, responsivo e interativo**, com animações fluidas e foco em uma experiência agradável para o usuário. 🚀  
 
- **Acesse aqui:** [Meu Portfólio](https://lovable.dev/projects/747350fc-7642-44dc-b134-f37b6817ff3c)
+ **Acesse aqui:** [Meu Portfólio]([https://lovable.dev/projects/747350fc-7642-44dc-b134-f37b6817ff3c](https://portifolio-dev-ashen.vercel.app/))
 
 ---
 
