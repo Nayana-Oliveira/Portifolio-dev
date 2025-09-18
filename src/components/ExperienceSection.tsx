@@ -68,6 +68,18 @@ const experiences = [
       issuer: "Cisco",
       year: "2025",
       icon: Award
+    },
+    {
+      name: "Segurança em Tecnologia da Informação",
+      issuer: "Fundação Bradesco",
+      year: "2025",
+      icon: Award
+    },
+    {
+      name: "Java Foundations",
+      issuer: "Oracle",
+      year: "2025",
+      icon: Award
     }
   ];
 
