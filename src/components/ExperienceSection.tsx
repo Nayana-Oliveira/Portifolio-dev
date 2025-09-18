@@ -29,7 +29,7 @@ const experiences = [
   company: "Projeto Acadêmico",
   location: "Brasil",
   period: "2024",
-  description: "Website feito para apresentar um produto para vender.",
+  description: "Website feito para apresentar uma landing page.",
   achievements: [
     "Design responsivo e moderno"
   ],
@@ -54,13 +54,19 @@ const experiences = [
     {
       name: "Oracle Database Certified",
       issuer: "Oracle",
-      year: "20255",
+      year: "2025",
       icon: Award
     },
     {
       name: "Oracle Database Foundations",
       issuer: "Oracle",
       year: "2025", 
+      icon: Award
+    },
+    {
+      name: "Fundamentos do Hardware do  Computador",
+      issuer: "Cisco",
+      year: "2025",
       icon: Award
     }
   ];
