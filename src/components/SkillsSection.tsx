@@ -37,7 +37,7 @@ const SkillsSection = () => {
     {
       title: "Frontend",
       icon: Globe,
-      skills: ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind"],
+      skills: ["React", "JavaScript", "HTML5", "CSS3"],
       color: "from-blue-500 to-purple-600"
     },
     {
@@ -49,26 +49,8 @@ const SkillsSection = () => {
     {
       title: "Database",
       icon: Database, 
-      skills: ["MySQL", "SQL Server", "MongoDB"],
+      skills: ["MySQL", "SQL Lite", "MongoDB", "Modelagem de dados"],
       color: "from-orange-500 to-red-600"
-    },
-    {
-      title: "DevOps",
-      icon: Cpu,
-      skills: ["AWS", "Git"],
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      title: "Mobile",
-      icon: Smartphone,
-      skills: ["React Native", "Android"],
-      color: "from-cyan-500 to-blue-600"
-    },
-    {
-      title: "Tools",
-      icon: Zap,
-      skills: ["VS Code", "Figma"],
-      color: "from-yellow-500 to-orange-600"
     }
   ];
 
@@ -85,7 +67,7 @@ const SkillsSection = () => {
               Habilidades Técnicas
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-              Tecnologias e ferramentas que domino para criar soluções completas
+              Tecnologias e ferramentas que uso para criar soluções completas
             </p>
             <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -121,22 +103,6 @@ const SkillsSection = () => {
                       </div>
                     ))}
                   </div>
-
-                  <div className="mt-6 pt-4 border-t border-border">
-                    <div className="flex justify-between text-sm text-muted-foreground mb-2">
-                      <span>Nível de Proficiência</span>
-                      <span>Intermediário</span>
-                    </div>
-                    <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
-                      <div 
-                        className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 group-hover:animate-glow`}
-                        style={{ 
-                          width: isVisible ? '50%' : '0%',
-                          transitionDelay: `${categoryIndex * 200}ms`
-                        }}
-                      ></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}
@@ -148,7 +114,6 @@ const SkillsSection = () => {
               {[
                 "Metodologias Ágeis",
                 "Clean Code", 
-                "Design Patterns",
                 "Microserviços",
                 "Testes Unitários",
                 "UX/UI Basics",
