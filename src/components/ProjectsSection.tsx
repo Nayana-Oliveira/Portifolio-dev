@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       gradient: "from-green-500 to-cyan-600",
       features: ["Design Responsivo", "Menu Mobile Interativo", "Animações de Scroll"],
       github: "https://github.com/Nayana-Oliveira/Astrotech",
-      demo: "https://astrotech-olive.vercel.app/",
+      demo: "https://nayana-oliveira.github.io/Astrotech/",
       image: projectAstrotech
     },
     {
