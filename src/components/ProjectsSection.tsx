@@ -1,9 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { ExternalLink, Github, Zap, Code } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import projectLumina from "@/assets/lumina.png";
-import projectAstrotech from "@/assets/astrotech.png"; 
+import projectAstrotech from "@/assets/astrotech.png";
+import projectStokki from "@/assets/stokki.png";
+import projectGrainoble from "@/assets/grão-nobre.png";
+import projectHako from "@/assets/hako.png";
+import projectBosque from "@/assets/Bosque-Suporte.jpg";
+import projectItrainee from "@/assets/ITrainee.png";
+import { cn } from "@/lib/utils";
 
 const ProjectsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -14,7 +20,7 @@ const ProjectsSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -26,29 +32,70 @@ const ProjectsSection = () => {
       title: "Astrotech",
       description: "Landing page moderna e responsiva para uma empresa de tecnologia, com foco em energia solar.",
       technologies: ["HTML5", "CSS3", "JavaScript"],
-      icon: Code,
-      gradient: "from-green-500 to-cyan-600",
-      features: ["Design Responsivo", "Menu Mobile Interativo", "Animações de Scroll"],
       github: "https://github.com/Nayana-Oliveira/Astrotech",
       demo: "https://nayana-oliveira.github.io/Astrotech/",
-      image: projectAstrotech
+      image: projectAstrotech,
+      type: "frontend"
     },
     {
       title: "Lumina",
       description: "Plataforma para gerenciar livros e filmes assistidos.",
       technologies: ["Mongoose", "Express", "HTML5", "JavaScript", "CSS3"],
-      icon: Zap,
-      gradient: "from-blue-500 to-purple-600",
-      features: ["Dashboards", "Criação, edição e exclusão de livros e filmes", "Responsivo"],
       github: "https://github.com/Nayana-Oliveira/Lumina",
       demo: "https://lumina-olive-seven.vercel.app/",
-      image: projectLumina
+      image: projectLumina,
+      type: "fullstack"
+    },
+    {
+      title: "Hako",
+      description: "Plataforma para gerenciar livros e filmes assistidos.",
+      technologies: ["Mongoose", "Express", "HTML5", "JavaScript", "CSS3", "SQLite"],
+      github: "https://github.com/Nayana-Oliveira/Lumina",
+      demo: "https://lumina-olive-seven.vercel.app/",
+      image: projectHako,
+      type: "fullstack"
+    },
+    {
+      title: "Stokki",
+      description: "Sistema de gerenciamento de estoque completo, projetado para uso escolar ou empresarial.",
+      technologies: ["React", "Express", "Vite", "CSS3"],
+      github: "https://github.com/Nayana-Oliveira/Stokki",
+      demo: "https://stokki.vercel.app/login",
+      image: projectStokki,
+      type: "fullstack"
+    },
+    {
+      title: "Grão Nobre",
+      description: "Landing page responsiva Grão Nobre Cafeteria.",
+      technologies: ["html5", "CSS3", "JavaScript"],
+      github: "https://github.com/Nayana-Oliveira/Grao-Nobre",
+      demo: "https://grao-nobre.vercel.app/",
+      image: projectGrainoble,
+      type: "Frontend"
+    },
+    {
+      title: "Bosque Suporte",
+      description: "Sistema de tickets de suporte (Help Desk) full-stack para a Escola Bosque.",
+      technologies: ["React.js", "Express", "MySQL", "CSS3", "Vite", "Node.js", "JWT"],
+      github: "https://github.com/Nayana-Oliveira/Bosque-Suporte",
+      demo: "https://bosque-suporte.vercel.app/login",
+      image: projectBosque,
+      type: "fullstack"
+    },
+    {
+      title: "Itrainee",
+      description: "Site iTrainee para o Projeto Integrador do primeiro semestre.",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      github: "https://github.com/Nayana-Oliveira/iTrainee",
+      demo: "https://itrainee.netlify.app/",
+      image: projectItrainee,
+      type: "frontend"
     }
   ];
 
   return (
-    <section 
-      id="projetos" 
+    <section
+      id="projetos"
       ref={sectionRef}
       className="py-20 bg-background-secondary relative overflow-hidden"
     >
@@ -64,95 +111,64 @@ const ProjectsSection = () => {
             <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={project.title}
-                className={`${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
-                style={{ animationDelay: `${index * 200}ms` }}
+                className={`group transform transition-transform duration-300 ease-out hover:scale-[1.03] ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <Card className="bg-card hover:bg-card-hover border-border transition-all duration-500 transform hover:scale-[1.02] hover:shadow-hover overflow-hidden group">
-                  <CardContent className="p-0">
-                    <div className="grid lg:grid-cols-2 gap-8 p-8">
-                      <div className="space-y-6">
-                        <div className="flex items-center space-x-4">
-                          <div className={`p-3 rounded-xl bg-gradient-to-r ${project.gradient} text-white group-hover:animate-glow`}>
-                            <project.icon size={28} />
-                          </div>
-                          <div>
-                            <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                              {project.title}
-                            </h3>
-                          </div>
-                        </div>
-
-                        <p className="text-muted-foreground leading-relaxed">
-                          {project.description}
-                        </p>
-
-                        <div>
-                          <h4 className="text-sm font-semibold text-foreground mb-3">Tecnologias Utilizadas</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech) => (
-                              <span 
-                                key={tech}
-                                className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200 cursor-default"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="flex gap-4 pt-4">
-                          <Button 
-                            variant="default"
-                            className="bg-primary hover:bg-primary-hover text-primary-foreground shadow-glow hover:shadow-hover transition-all duration-300"
-                            onClick={() => window.open(project.github, "_blank")}
-                          >
-                            <Github className="w-4 h-4 mr-2" />
-                            Código
-                          </Button>
-                          <Button 
-                            variant="outline"
-                            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                            onClick={() => window.open(project.demo, "_blank")}
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Demo
-                          </Button>
-                        </div>
-                      </div>
-
-                      <div className="space-y-6">
-                        <h4 className="text-lg font-bold text-foreground">Principais Funcionalidades</h4>
-                        <div className="space-y-4">
-                          {project.features.map((feature, featureIndex) => (
-                            <div 
-                              key={feature}
-                              className="flex items-center space-x-3 group-hover:animate-slide-in-right"
-                              style={{ animationDelay: `${featureIndex * 100}ms` }}
-                            >
-                              <div className="w-2 h-2 bg-primary rounded-full group-hover:animate-glow"></div>
-                              <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                                {feature}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="bg-secondary rounded-lg p-2 mt-6 border border-border overflow-hidden">
-                          <div className="aspect-video rounded-lg overflow-hidden">
-                            <img 
-                              src={project.image}
-                              alt={`${project.title} preview`}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                          </div>
-                        </div>
-                      </div>
+                <Card className="bg-card border-border overflow-hidden h-full flex flex-col hover:shadow-hover transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden border-b border-border">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                  </div>
+                  <CardHeader className="p-5">
+                    <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription className="text-muted-foreground text-sm leading-relaxed min-h-[3rem]">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-5 pt-0 flex-grow">
+                    <h4 className="text-xs font-semibold text-foreground mb-2 uppercase tracking-wider">Tecnologias</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="bg-secondary text-secondary-foreground px-2.5 py-0.5 rounded-full text-xs font-medium cursor-default"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </CardContent>
+                  <CardFooter className="p-5 pt-0 mt-auto">
+                    <div className="flex gap-3">
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="bg-primary hover:bg-primary-hover text-primary-foreground text-xs shadow-glow hover:shadow-hover transition-all duration-300"
+                        onClick={() => window.open(project.github, "_blank")}
+                      >
+                        <Github className="w-3.5 h-3.5 mr-1.5" />
+                        Código
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-xs transition-all duration-300"
+                        onClick={() => window.open(project.demo, "_blank")}
+                      >
+                        <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
+                        Demo
+                      </Button>
+                    </div>
+                  </CardFooter>
                 </Card>
               </div>
             ))}
@@ -162,7 +178,7 @@ const ProjectsSection = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Interessado em ver mais projetos ou discutir uma colaboração?
             </p>
-            <Button 
+            <Button
               size="lg"
               className="bg-primary hover:bg-primary-hover text-primary-foreground shadow-glow hover:shadow-hover transition-all duration-300 transform hover:scale-105"
               onClick={() => {

@@ -43,7 +43,7 @@ const SkillsSection = () => {
     {
       title: "Backend", 
       icon: Server,
-      skills: ["Node.js", "Java", "Python"],
+      skills: ["Node.js", "Java", "Python", "Express"],
       color: "from-green-500 to-teal-600"
     },
     {
