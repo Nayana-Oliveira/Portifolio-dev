@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -62,12 +62,12 @@ const HeroSection = () => {
 
           <div className="animate-fade-in-up animation-delay-600 mb-12">
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Apaixonada por tecnologia, inovação e soluções que transformam negócios.
+              Estudante de ADS focada em construir aplicações web úteis e bem-feitas.
             </p>
           </div>
 
           <div className="animate-fade-in-up animation-delay-900 mb-16">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-wrap gap-4 justify-center items-center">
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary-hover text-primary-foreground shadow-glow hover:shadow-hover transition-all duration-300 transform hover:scale-105"
@@ -82,6 +82,21 @@ const HeroSection = () => {
                 onClick={() => scrollToSection("contato")}
               >
                 Entrar em Contato
+              </Button>
+
+              <Button 
+                variant="outline"
+                size="lg"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                asChild
+              >
+                <a 
+                  href="/Curriculo_Nayana_Heslley.pdf"
+                  download
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Baixar CV
+                </a>
               </Button>
             </div>
           </div>

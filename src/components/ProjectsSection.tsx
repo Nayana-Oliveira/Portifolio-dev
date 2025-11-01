@@ -30,7 +30,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Astrotech",
-      description: "Landing page moderna e responsiva para uma empresa de tecnologia, com foco em energia solar.",
+      description: "Meu primeiro projeto de landing page onde foquei em aprender design responsivo com HTML e CSS puro.",
       technologies: ["HTML5", "CSS3", "JavaScript"],
       github: "https://github.com/Nayana-Oliveira/Astrotech",
       demo: "https://nayana-oliveira.github.io/Astrotech/",
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Stokki",
-      description: "Sistema de gerenciamento de estoque completo, projetado para uso escolar ou empresarial.",
+      description: "Um sistema de estoque que criei para praticar a lógica de back-end com Express e o gerenciamento de estado no React.",
       technologies: ["React", "Express", "Vite", "CSS3"],
       github: "https://github.com/Nayana-Oliveira/Stokki",
       demo: "https://stokki.vercel.app/login",
@@ -75,7 +75,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Bosque Suporte",
-      description: "Sistema de tickets de suporte (Help Desk) full-stack para a Escola Bosque.",
+      description: "Meu projeto full-stack mais completo, onde integrei React com back-end em Node.js e um banco de dados MySQL para gerenciar um sistema de Help Desk.",
       technologies: ["React.js", "Express", "MySQL", "CSS3", "Vite", "Node.js", "JWT"],
       github: "https://github.com/Nayana-Oliveira/Bosque-Suporte",
       demo: "https://bosque-suporte.vercel.app/login",
