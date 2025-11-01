@@ -47,15 +47,6 @@ const ProjectsSection = () => {
       type: "fullstack"
     },
     {
-      title: "Hako",
-      description: "Plataforma para gerenciar livros e filmes assistidos.",
-      technologies: ["Mongoose", "Express", "HTML5", "JavaScript", "CSS3", "SQLite"],
-      github: "https://github.com/Nayana-Oliveira/Lumina",
-      demo: "https://lumina-olive-seven.vercel.app/",
-      image: projectHako,
-      type: "fullstack"
-    },
-    {
       title: "Stokki",
       description: "Um sistema de estoque que criei para praticar a lógica de back-end com Express e o gerenciamento de estado no React.",
       technologies: ["React", "Express", "Vite", "CSS3"],
